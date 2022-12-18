@@ -1,0 +1,17 @@
+-
+  data.header = {
+    fields: [
+      //- { name: 'character_avatar', blockName: 'header', span: 2, type: 'text' },
+      { name: 'character_name', label: 'Character Name', placeholder: "Character Name", blockName: 'header', span: 9, type: 'text' },
+      { name: 'pronouns', label: 'Pronouns', placeholder: "they/them", blockName: 'header', span: 2, type: 'text' },
+      { name: 'background', label: 'Background', placeholder: "Background", blockName: 'header', type: 'text' },
+      { name: 'special', label: 'Special', placeholder: "Special", blockName: 'header', type: 'textarea' },
+      { name: 'description', label: 'Description', options: [
+        { name: 'option_one', value: 1, text: "One", selected: true },
+        { name: 'option_two', value: 2, text: "Two" },
+        { name: 'option_three', value: 3, text: "Three", hidden: true },
+        { name: 'option_four', text: "Four" },
+        { name: 'option_five', value: 5, text: "Five" },
+      ], blockName: 'header', type: 'select' },
+    ]
+  }

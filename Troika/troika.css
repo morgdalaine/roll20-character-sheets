@@ -1,0 +1,1588 @@
+@import url("https://fonts.googleapis.com/css?family=Averia+Serif+Libre:300:400:700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Averia+Sans+Libre:300:400:700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Averia+Libre:300:400:700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lexend:300:400:700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300:400:700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nunito:300:400:700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Averia+Gruesa+Libre&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Material+Icons&display=swap");
+html {
+  box-sizing: border-box;
+  font-size: 12px;
+}
+html .characterviewer,
+html .tab-content,
+html .sheetform,
+html .charactersheet {
+  box-sizing: border-box;
+  height: calc(100% - 2rem);
+}
+html .characterviewer {
+  display: grid !important;
+  grid-template-rows: auto 1fr;
+}
+html .characterviewer .nav-tabs {
+  margin: 0;
+  border: none;
+}
+html .characterviewer .nav-tabs > li > a {
+  border: none !important;
+}
+html .characterviewer .charsheet {
+  padding: 0;
+}
+
+.charsheet * {
+  box-sizing: border-box;
+  height: unset;
+  width: unset;
+  padding: unset;
+  margin: unset;
+  font-family: unset;
+  font-size: unset;
+  font-weight: unset;
+  line-height: unset;
+  color: unset;
+  border: unset;
+  border-radius: unset;
+  background: unset;
+  background-color: unset;
+  text-shadow: unset;
+  box-shadow: unset;
+}
+.charsheet h1,
+.charsheet h2,
+.charsheet h3,
+.charsheet h4,
+.charsheet h5 {
+  font-size: unset;
+  line-height: unset;
+  color: unset;
+}
+.charsheet p,
+.charsheet input,
+.charsheet input[type=number],
+.charsheet textarea,
+.charsheet select,
+.charsheet button,
+.charsheet button[type=roll],
+.charsheet label {
+  display: unset;
+  width: unset;
+  height: unset;
+  padding: unset;
+  margin-bottom: unset;
+  font-family: unset;
+  font-size: unset;
+  font-weight: unset;
+  text-shadow: none;
+  line-height: unset;
+  color: unset;
+  border: unset;
+  border-radius: unset;
+  background: unset;
+  background-color: unset;
+  box-shadow: unset;
+}
+.charsheet button[type=roll]:before {
+  display: none;
+}
+.charsheet input[disabled],
+.charsheet select[disabled],
+.charsheet textarea[disabled],
+.charsheet input[readonly],
+.charsheet select[readonly],
+.charsheet textarea[readonly] {
+  background-color: unset;
+  border-color: unset;
+}
+
+.charsheet * {
+  font-size: 1em;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+.charsheet fieldset {
+  background: transparent;
+}
+.charsheet span {
+  word-break: break-word;
+}
+
+input[type=number] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.characterviewer .content {
+  margin-bottom: 0;
+}
+.characterviewer .nav-tabs {
+  padding-top: 0.2rem;
+  margin-bottom: 0;
+}
+.characterviewer .nav-tabs > li {
+  margin-bottom: 0;
+}
+.characterviewer .nav-tabs > li > a {
+  padding: 0.25rem;
+}
+.characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1) {
+  opacity: 0.3;
+}
+.characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):hover, .characterviewer .nav-tabs > li:nth-child(4) > a:nth-child(1):focus {
+  opacity: 1;
+}
+
+.ui-dialog .largedialog {
+  padding: 0 0.5rem;
+}
+.ui-dialog .charsheet {
+  padding: 0;
+}
+
+* {
+  color: rgb(34, 34, 34);
+  font: normal 1rem/1.4 "Averia Serif Libre", serif;
+}
+
+.characterviewer .nav-tabs > li > a {
+  font-variant: small-caps;
+  font-weight: 700;
+  font-family: "Lexend", "Ubuntu", "Nunito", "Averia Sans Libre", sans-serif;
+  text-decoration: none;
+}
+
+* {
+  --foreground: rgba(255, 255, 255, 0.8);
+  --button-background-color: rgba(45, 42, 39, 0.1);
+  --button-color: #2d2a27;
+  --button-hover-color: #bf3c27;
+  --button-hover-background: rgba(204, 0, 0, 0.2);
+  --button-hover-border-color: #fbe706;
+  --button-active-color: #2b5e89;
+  --button-active-background-color: rgba(43, 94, 137, 0.5);
+  --button-active-filter: drop-shadow(0px 0px 2px rgba(240, 75, 0, 0.4))
+    drop-shadow(0px 0px 4px rgb(240, 75, 0, 1));
+  --button-active-text-shadow-color: #fbe706;
+  --button-active-text-stroke: rgba(255, 255, 255, 0.35);
+  --toggle-inactive-color: #96928f;
+  --toggle-active-color: #a77915;
+  --label-color: #2d2a27;
+  --input-background: #fff;
+  --input-color: #2d2a27;
+  --input-border-color: #bf3c27;
+  --input-active-background-color: rgba(38, 38, 38, 0.1);
+  --input-active-color: #3676ab;
+  --input-active-border-color: #2b5e89;
+  --input-disabled-background-color: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+  --input-disabled-color: rgba(255, 255, 255, 0.5);
+  --input-disabled-border-color: rgba(255, 255, 255, 0.3);
+  --panel-color: #2d2a27;
+  --panel-title-background-color: #2d2a27;
+  --panel-title-color: #d0b9b1;
+  --repeating-empty-border-color: rgba(165, 150, 114, 0.3);
+  --repeating-empty-color: #d7d1cc;
+  --repeating-empty-background-color: rgba(45, 42, 39, 0.1);
+  --repeating-item-border-color: rgba(165, 150, 114, 0.3);
+  --repeating-item-background-color: rgba(45, 42, 39, 0.3);
+  --group-headless-background-color: #ffffff1a;
+  --magic-hilite-background: linear-gradient(0deg, rgba(#f04b00, 0.1), rgba(#f04b00, 0.1)),
+    rgba(black, 0.1);
+  --magic-hilite-border-image: linear-gradient(
+    180deg,
+    #6d2525 0%,
+    #f04b00 25%,
+    #f28702 50%,
+    #f04b00 75%,
+    #6d2525 100%
+  );
+  --divider-color: #f60;
+  --theme-gradient: linear-gradient(
+    180deg,
+    #6f2f24 0%,
+    #f60 15%,
+    #e37024 50%,
+    #f60 85%,
+    #6f2f24 100%
+  );
+  --slider-background: $orange-dark;
+  --slider-handle: url("");
+  --modal-background-color: #403b33;
+  --modal-shadow-color: #2d2a27;
+  --modal-scroll-color: #4f483c;
+  --modal-shroud-color: rgba(45, 42, 39, 0.5);
+}
+
+.sheet-darkmode *,
+.sheet-rolltemplate-troika.sheet-rolltemplate-darkmode {
+  --foreground: #fff;
+  --button-background-color: #2d2a27;
+  --button-color: #fff;
+  --button-active-background-color: #a77915;
+  --button-active-color: #f30;
+  --button-hover-border-color: #f30;
+  --button-hover-background: linear-gradient(
+    0deg,
+    #991f00 0%,
+    #f30 30%,
+    #991f00 100%
+  );
+  --button-active-filter: drop-shadow(0px 0px 2px #991f00)
+    drop-shadow(0px 0px 4px #991f00);
+  --button-active-text-shadow-color: #f30;
+  --button-active-text-stroke: rgba(255, 255, 255, 0.35);
+  --button-border-image-src: url("");
+  --button-active-border-image-src: url("");
+  --label-color: #8f7c4f;
+  --toggle-inactive-color: #96928f;
+  --toggle-active-color: #14b9e3;
+  --input-background: #2d2a27;
+  --input-color: #14b9e3;
+  --input-border-color: #14b9e3;
+  --input-active-background-color: #001821;
+  --input-active-color: #6bd7f2;
+  --input-active-border-color: #6bd7f2;
+  --input-disabled-background-color: rgba(255, 255, 255, 0.2);
+  --input-disabled-color: rgba(255, 255, 255, 0.8);
+  --input-disabled-border-color: rgba(255, 255, 255, 0.3);
+  --panel-color: #2d2a27;
+  --panel-title-background-color: #2d2a27;
+  --panel-title-color: #fff;
+  --repeating-empty-border-color: rgba(20, 185, 227, 0.3);
+  --repeating-empty-color: #d7d1cc;
+  --repeating-empty-background-color: rgba(20, 185, 227, 0.1);
+  --repeating-item-border-color: rgba(20, 185, 227, 0.3);
+  --repeating-item-background-color: rgba(20, 185, 227, 0.1);
+  --group-headless-background-color: #ffffff1a;
+  --magic-hilite-background: linear-gradient(0deg, rgba($accent-blue, 0.1), rgba($accent-blue, 0.1)),
+    rgba(black, 0.1);
+  --magic-hilite-border-image: linear-gradient(
+    180deg,
+    $accent-blue-darkest 0%,
+    $accent-blue 25%,
+    $accent-blue-lightest 50%,
+    $accent-blue 75%,
+    $accent-blue-darkest 100%
+  );
+  --magic-text-shadow-color: #0c6d85;
+  --magic-text-color: #14b9e3;
+  --magic-label-color: #14b9e3;
+  --label-color: #6bd7f2;
+  --divider-color: #f30;
+  --theme-gradient: linear-gradient(
+    180deg,
+    #991f00 0%,
+    #f30 15%,
+    #ff8566 50%,
+    #f30 85%,
+    #991f00 100%
+  );
+  --magic-icon: url("");
+  --slider-background: #991f00;
+  --slider-handle: url("");
+  --modal-background-color: #001821;
+  --modal-shadow-color: #2d2a27;
+  --modal-scroll-color: #00aeed;
+  --modal-shroud-color: rgba(45, 42, 39, 0.5);
+}
+
+html .charsheet .troika {
+  /**
+   * Clear inner floats
+   */
+  /**
+   * Main content containers
+   * 1. Make the container full-width with a maximum width
+   * 2. Center it in the viewport
+   * 3. Leave some space on the edges, especially valuable on small screens
+   */
+  /**
+   * Hide text while making it readable for screen readers
+   * 1. Needed in WebKit-based browsers because of an implementation bug;
+   *    See: https://code.google.com/p/chromium/issues/detail?id=457146
+   */
+  /**
+   * Hide element while making it readable for screen readers
+   * Shamelessly borrowed from HTML5Boilerplate:
+   * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+   */
+  /**
+   * Basic typography style for copy text
+   */
+  /* CSS */
+  /* CSS */
+  /* CSS */
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+html .charsheet .troika input[type=number],
+html .charsheet .troika input[type=text],
+html .charsheet .troika select,
+html .charsheet .troika textarea {
+  width: 100%;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
+  background-color: var(--input-background);
+  background-color: none;
+  color: var(--input-color);
+  font-family: "Lexend", "Ubuntu", "Nunito", "Averia Sans Libre", sans-serif;
+}
+html .charsheet .troika input[type=number]:active, html .charsheet .troika input[type=number]:hover, html .charsheet .troika input[type=number]:focus,
+html .charsheet .troika input[type=text]:active,
+html .charsheet .troika input[type=text]:hover,
+html .charsheet .troika input[type=text]:focus,
+html .charsheet .troika select:active,
+html .charsheet .troika select:hover,
+html .charsheet .troika select:focus,
+html .charsheet .troika textarea:active,
+html .charsheet .troika textarea:hover,
+html .charsheet .troika textarea:focus {
+  outline: 0;
+  color: var(--input-active-color);
+}
+html .charsheet .troika input[type=number]::placeholder,
+html .charsheet .troika input[type=text]::placeholder,
+html .charsheet .troika select::placeholder,
+html .charsheet .troika textarea::placeholder {
+  color: #757371;
+}
+html .charsheet .troika select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("https://www.svgrepo.com/show/361418/chevron-down.svg");
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+}
+html .charsheet .troika select option {
+  background: var(--input-background);
+  background-color: #c00;
+  color: var(--input-color);
+  font-family: "Lexend", "Ubuntu", "Nunito", "Averia Sans Libre", sans-serif;
+  font-size: 1rem;
+}
+html .charsheet .troika input[type=number] {
+  text-align: center;
+}
+html .charsheet .troika input[type=number][disabled], html .charsheet .troika input[type=number][readonly] {
+  cursor: default;
+  background: var(--input-disabled-background-color);
+  color: var(--input-disabled-color);
+  border: 1px solid var(--input-disabled-border-color);
+}
+html .charsheet .troika textarea {
+  min-height: 5rem;
+  max-height: 10rem;
+  resize: vertical;
+  scrollbar-width: thin;
+  scrollbar-color: var(--input-active-color) transparent;
+}
+html .charsheet .troika textarea::-webkit-scrollbar {
+  width: 0.5rem;
+  background: transparent;
+}
+html .charsheet .troika textarea::-webkit-scrollbar-track {
+  background: var(--input-active-color);
+}
+html .charsheet .troika span[name] {
+  white-space: pre-wrap;
+}
+html .charsheet .troika span[name]:empty {
+  text-align: center;
+}
+html .charsheet .troika span[name]:empty:before {
+  display: inline;
+  content: "—";
+}
+html .charsheet .troika .el-input {
+  position: relative;
+  font-size: 1rem;
+  display: inline-flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+html .charsheet .troika .el-input--small .el-input__inner {
+  font-size: 0.875rem;
+  height: 2rem;
+}
+html .charsheet .troika .el-input--small .el-input__wrapper {
+  padding-inline: 2rem;
+}
+html .charsheet .troika .el-input--large .el-input__inner {
+  font-size: 1.25rem;
+  height: 3rem;
+}
+html .charsheet .troika .el-input--large .el-input__wrapper {
+  padding-inline: 3rem;
+}
+html .charsheet .troika .el-input__wrapper {
+  display: inline-flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  padding-block: 1px;
+  padding-inline: 1rem;
+  background-color: var(--input-background);
+  box-shadow: 0 0 0 1px var(--input-border-color) inset;
+  border-radius: 0.5rem;
+}
+html .charsheet .troika .el-input__wrapper:hover {
+  box-shadow: 0 0 0 1px var(--input-active-border-color) inset;
+}
+html .charsheet .troika .el-input__inner {
+  height: 2.5rem;
+}
+html .charsheet .troika .el-input-number {
+  position: relative;
+  display: inline-flex;
+  width: 10rem;
+}
+html .charsheet .troika .el-input-number--simple {
+  width: 5rem;
+  padding-inline: inherit;
+}
+html .charsheet .troika .el-input-number--simple > .el-input-number__increase, html .charsheet .troika .el-input-number--simple > .el-input-number__decrease {
+  display: none;
+}
+html .charsheet .troika .el-input-number--small {
+  width: 8rem;
+}
+html .charsheet .troika .el-input-number--small > .el-input__wrapper {
+  padding-inline: 2.5rem;
+}
+html .charsheet .troika .el-input-number--small > .el-input-number__increase, html .charsheet .troika .el-input-number--small > .el-input-number__decrease {
+  width: 2rem;
+  aspect-ratio: 1;
+  font-size: 0.875rem;
+}
+html .charsheet .troika .el-input-number--large {
+  width: 15rem;
+}
+html .charsheet .troika .el-input-number--large > .el-input__wrapper {
+  padding-inline: 2.5rem;
+}
+html .charsheet .troika .el-input-number--large > .el-input-number__increase, html .charsheet .troika .el-input-number--large > .el-input-number__decrease {
+  width: 3rem;
+  aspect-ratio: 1;
+  font-size: 1.25rem;
+}
+html .charsheet .troika .el-input-number__increase, html .charsheet .troika .el-input-number__decrease {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  position: absolute;
+  z-index: 1;
+  top: 1px;
+  bottom: 1px;
+  width: 2.5rem;
+  aspect-ratio: 1;
+  font-size: 1rem;
+  background-color: #3676ab;
+}
+html .charsheet .troika .el-input-number__increase {
+  right: 1px;
+  border-radius: 0 0.5rem 0.5rem 0;
+  border-left: 1px solid var(--input-border-color);
+}
+html .charsheet .troika .el-input-number__increase:hover {
+  border-left: 1px solid var(--input-active-border-color);
+}
+html .charsheet .troika .el-input-number__decrease {
+  left: 1px;
+  border-radius: 0.5rem 0 0 0.5rem;
+  border-right: 1px solid var(--input-border-color);
+}
+html .charsheet .troika .el-input-number__decrease:hover {
+  border-right: 1px solid var(--input-active-border-color);
+}
+html .charsheet .troika .el-textarea {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: bottom;
+}
+html .charsheet .troika .el-textarea__inner {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  background-color: var(--input-background);
+  box-shadow: 0 0 0 1px var(--input-border-color) inset;
+  border-radius: 0.5rem;
+}
+html .charsheet .troika .clearfix::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+html .charsheet .troika .container {
+  max-width: 1180px; /* 1 */
+  margin-left: auto; /* 2 */
+  margin-right: auto; /* 2 */
+  padding-left: 20px; /* 3 */
+  padding-right: 20px; /* 3 */
+  width: 100%; /* 1 */
+}
+html .charsheet .troika .hide-text {
+  overflow: hidden;
+  padding: 0; /* 1 */
+  text-indent: 101%;
+  white-space: nowrap;
+}
+html .charsheet .troika .visually-hidden:not(:focus):not(:active) {
+  border: 0;
+  clip-path: inset(50%);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+html .charsheet .troika label {
+  display: block;
+  color: var(--label-color);
+  font-family: "Averia Gruesa Libre", "Averia Serif Libre", serif;
+  font-variant: small-caps;
+  font-weight: 700;
+}
+html .charsheet .troika .pictos {
+  font-family: Pictos;
+}
+html .charsheet .troika button[type=action],
+html .charsheet .troika button[type=roll] {
+  background: var(--button-background-color);
+  color: var(--button-color);
+}
+html .charsheet .troika button[type=action]:hover,
+html .charsheet .troika button[type=roll]:hover {
+  background: var(--button-hover-background);
+  color: var(--button-hover-color);
+}
+html .charsheet .troika button[type=action]:active,
+html .charsheet .troika button[type=roll]:active {
+  background: var(--button-active-background-color);
+  color: var(--button-active-color);
+}
+html .charsheet .troika .button--glitch,
+html .charsheet .troika .button--glitch:after {
+  width: 150px;
+  height: 76px;
+  line-height: 78px;
+  font-size: 20px;
+  font-family: "Bebas Neue", sans-serif;
+  background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  box-shadow: 6px 0px 0px #00e6f6;
+  outline: transparent;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+html .charsheet .troika .button--glitch:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  content: "ALTERNATE TEXT";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #00e6f6 3%, #00e6f6 5%, #ff013c 5%);
+  text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
+  clip-path: var(--slice-0);
+}
+html .charsheet .troika .button--glitch:hover:after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+@media (min-width: 768px) {
+  html .charsheet .troika .button--glitch,
+  html .charsheet .troika .button--glitch:after {
+    width: 200px;
+    height: 86px;
+    line-height: 88px;
+  }
+}
+html .charsheet .troika .button-3d {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+@media (min-width: 768px) {
+  html .charsheet .troika .button-3d {
+    padding: 0.25em 0.75em;
+  }
+}
+html .charsheet .troika .button-3d:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+html .charsheet .troika .button--alt-text {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  padding: 0.5rem;
+}
+html .charsheet .troika .button--alt-text::after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(54, 118, 171, 0.5);
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+}
+html .charsheet .troika .button--alt-text:hover::after {
+  transform-origin: bottom center;
+  transform: skewY(9.3deg) scaleY(2);
+}
+html .charsheet .troika .button--alt-text:hover span:last-child {
+  transform: translateX(-50%) translateY(-80%);
+  opacity: 1;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+html .charsheet .troika .button--alt-text span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+html .charsheet .troika .button--alt-text span:last-child {
+  color: white;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  white-space: nowrap;
+}
+html .charsheet .troika .button-54 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+html .charsheet .troika .button-54:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+@media (min-width: 768px) {
+  html .charsheet .troika .button-54 {
+    padding: 0.25em 0.75em;
+  }
+}
+html .charsheet .troika .editor {
+  height: 100%;
+  position: relative;
+}
+html .charsheet .troika .editor__controller[value="0"] + .editor__view,
+html .charsheet .troika .editor__controller[value="0"] > .editor__view,
+html .charsheet .troika .editor__controller[value="0"] ~ .editor__view,
+html .charsheet .troika .editor__controller[value="0"] ~ * .editor__view {
+  display: grid;
+}
+html .charsheet .troika .editor__controller[value=on] + .editor__edit,
+html .charsheet .troika .editor__controller[value=on] > .editor__edit,
+html .charsheet .troika .editor__controller[value=on] ~ .editor__edit,
+html .charsheet .troika .editor__controller[value=on] ~ * .editor__edit {
+  display: grid;
+}
+html .charsheet .troika .editor__wrapper {
+  height: 100%;
+  position: relative;
+}
+html .charsheet .troika .editor__view, html .charsheet .troika .editor__edit {
+  display: none;
+  transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
+}
+html .charsheet .troika .editor__edit {
+  grid-template-rows: 1fr auto;
+  gap: 1rem;
+}
+html .charsheet .troika .editor__icon {
+  margin-inline: 0.5rem;
+}
+html .charsheet .troika .editor__toggle {
+  transition: 0.1s linear;
+}
+html .charsheet .troika .editor__toggle:hover {
+  transform: translateY(-0.2rem);
+  text-shadow: 0 0.4rem 0.2rem rgba(204, 0, 0, 0.2);
+}
+html .charsheet .troika .editor__toggle:active {
+  transform: translateY(0.4rem);
+}
+html .charsheet .troika .editor__close {
+  --close-size: 4rem;
+  display: inline-flex;
+  font-size: 3rem;
+  text-decoration: none;
+  width: var(--close-size);
+  aspect-ratio: 1;
+  transition: 0.5s linear;
+  position: relative;
+  z-index: 1;
+  margin: auto;
+}
+html .charsheet .troika .editor__close:hover::before {
+  transform: scale(1);
+}
+html .charsheet .troika .editor__close:hover::after {
+  color: #fff;
+}
+html .charsheet .troika .editor__close:active {
+  transform: translateY(0.4rem);
+}
+html .charsheet .troika .editor__close::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: var(--close-size);
+  aspect-ratio: 1;
+  background-color: #c00;
+  border-radius: 50%;
+  z-index: -1;
+  transform: scale(0);
+  transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
+}
+html .charsheet .troika .editor__close::after {
+  content: "*";
+  font-family: Pictos;
+  margin: auto;
+  color: #c00;
+}
+html .charsheet .troika .edit-toggle {
+  position: relative;
+  width: 2.5rem;
+  aspect-ratio: 1;
+}
+html .charsheet .troika .edit-toggle__controller[value="0"] ~ .edit-toggle__view {
+  display: block;
+}
+html .charsheet .troika .edit-toggle__controller[value=on] ~ .edit-toggle__edit {
+  display: block;
+}
+html .charsheet .troika .edit-toggle__view, html .charsheet .troika .edit-toggle__edit {
+  display: none;
+  transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
+}
+html .charsheet .troika .panel {
+  position: relative;
+  padding: 2rem;
+}
+html .charsheet .troika .panel__header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 1rem;
+}
+html .charsheet .troika .panel__header--text {
+  padding: 0.5rem 2rem;
+  background: #f9faeb;
+  border-bottom-right-radius: 2rem;
+}
+html .charsheet .troika .panel__header--toggle {
+  padding: 0.5rem 2rem;
+  background: #f9faeb;
+  border-bottom-left-radius: 2rem;
+}
+html .charsheet .troika .panel__wrapper {
+  height: 100%;
+}
+html .charsheet .troika .stats {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+}
+html .charsheet .troika .stats__edit .stats__wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+html .charsheet .troika .container {
+  background: transparent;
+}
+html .charsheet .troika .row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0.5rem 0.5rem;
+  justify-items: center;
+  align-items: start;
+  width: 100%;
+  margin: auto;
+}
+html .charsheet .troika .row:before, html .charsheet .troika .row:after {
+  display: none;
+}
+html .charsheet .troika .row > * {
+  width: 100%;
+  grid-column: 1/-1;
+}
+html .charsheet .troika .col {
+  grid-column: 1/-1;
+}
+html .charsheet .troika .col-1 {
+  position: initial;
+  grid-column-start: auto;
+  grid-column-end: span 1;
+}
+html .charsheet .troika .col-2 {
+  position: initial;
+  grid-column-start: auto;
+  grid-column-end: span 2;
+}
+html .charsheet .troika .col-3 {
+  position: initial;
+  grid-column-start: auto;
+  grid-column-end: span 3;
+}
+html .charsheet .troika .col-4 {
+  position: initial;
+  grid-column-start: auto;
+  grid-column-end: span 4;
+}
+html .charsheet .troika .col-5 {
+  position: initial;
+  grid-column-start: auto;
+  grid-column-end: span 5;
+}
+html .charsheet .troika .col-6 {
+  position: initial;
+  grid-column-start: auto;
+  grid-column-end: span 6;
+}
+html .charsheet .troika .col-7 {
+  position: initial;
+  grid-column-start: auto;
+  grid-column-end: span 7;
+}
+html .charsheet .troika .col-8 {
+  position: initial;
+  grid-column-start: auto;
+  grid-column-end: span 8;
+}
+html .charsheet .troika .col-9 {
+  position: initial;
+  grid-column-start: auto;
+  grid-column-end: span 9;
+}
+html .charsheet .troika .col-10 {
+  position: initial;
+  grid-column-start: auto;
+  grid-column-end: span 10;
+}
+html .charsheet .troika .col-11 {
+  position: initial;
+  grid-column-start: auto;
+  grid-column-end: span 11;
+}
+html .charsheet .troika .col-12 {
+  position: initial;
+  grid-column-start: auto;
+  grid-column-end: span 12;
+}
+@media (min-width: 375px) {
+  html .charsheet .troika .col-xs-1 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 1;
+  }
+  html .charsheet .troika .col-xs-2 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 2;
+  }
+  html .charsheet .troika .col-xs-3 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 3;
+  }
+  html .charsheet .troika .col-xs-4 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 4;
+  }
+  html .charsheet .troika .col-xs-5 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 5;
+  }
+  html .charsheet .troika .col-xs-6 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 6;
+  }
+  html .charsheet .troika .col-xs-7 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 7;
+  }
+  html .charsheet .troika .col-xs-8 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 8;
+  }
+  html .charsheet .troika .col-xs-9 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 9;
+  }
+  html .charsheet .troika .col-xs-10 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 10;
+  }
+  html .charsheet .troika .col-xs-11 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 11;
+  }
+  html .charsheet .troika .col-xs-12 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 12;
+  }
+}
+@media (min-width: 576px) {
+  html .charsheet .troika .col-sm-1 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 1;
+  }
+  html .charsheet .troika .col-sm-2 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 2;
+  }
+  html .charsheet .troika .col-sm-3 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 3;
+  }
+  html .charsheet .troika .col-sm-4 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 4;
+  }
+  html .charsheet .troika .col-sm-5 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 5;
+  }
+  html .charsheet .troika .col-sm-6 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 6;
+  }
+  html .charsheet .troika .col-sm-7 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 7;
+  }
+  html .charsheet .troika .col-sm-8 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 8;
+  }
+  html .charsheet .troika .col-sm-9 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 9;
+  }
+  html .charsheet .troika .col-sm-10 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 10;
+  }
+  html .charsheet .troika .col-sm-11 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 11;
+  }
+  html .charsheet .troika .col-sm-12 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 12;
+  }
+}
+@media (min-width: 768px) {
+  html .charsheet .troika .col-md-1 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 1;
+  }
+  html .charsheet .troika .col-md-2 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 2;
+  }
+  html .charsheet .troika .col-md-3 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 3;
+  }
+  html .charsheet .troika .col-md-4 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 4;
+  }
+  html .charsheet .troika .col-md-5 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 5;
+  }
+  html .charsheet .troika .col-md-6 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 6;
+  }
+  html .charsheet .troika .col-md-7 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 7;
+  }
+  html .charsheet .troika .col-md-8 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 8;
+  }
+  html .charsheet .troika .col-md-9 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 9;
+  }
+  html .charsheet .troika .col-md-10 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 10;
+  }
+  html .charsheet .troika .col-md-11 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 11;
+  }
+  html .charsheet .troika .col-md-12 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 12;
+  }
+}
+@media (min-width: 992px) {
+  html .charsheet .troika .col-lg-1 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 1;
+  }
+  html .charsheet .troika .col-lg-2 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 2;
+  }
+  html .charsheet .troika .col-lg-3 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 3;
+  }
+  html .charsheet .troika .col-lg-4 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 4;
+  }
+  html .charsheet .troika .col-lg-5 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 5;
+  }
+  html .charsheet .troika .col-lg-6 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 6;
+  }
+  html .charsheet .troika .col-lg-7 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 7;
+  }
+  html .charsheet .troika .col-lg-8 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 8;
+  }
+  html .charsheet .troika .col-lg-9 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 9;
+  }
+  html .charsheet .troika .col-lg-10 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 10;
+  }
+  html .charsheet .troika .col-lg-11 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 11;
+  }
+  html .charsheet .troika .col-lg-12 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 12;
+  }
+}
+@media (min-width: 1200px) {
+  html .charsheet .troika .col-xl-1 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 1;
+  }
+  html .charsheet .troika .col-xl-2 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 2;
+  }
+  html .charsheet .troika .col-xl-3 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 3;
+  }
+  html .charsheet .troika .col-xl-4 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 4;
+  }
+  html .charsheet .troika .col-xl-5 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 5;
+  }
+  html .charsheet .troika .col-xl-6 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 6;
+  }
+  html .charsheet .troika .col-xl-7 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 7;
+  }
+  html .charsheet .troika .col-xl-8 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 8;
+  }
+  html .charsheet .troika .col-xl-9 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 9;
+  }
+  html .charsheet .troika .col-xl-10 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 10;
+  }
+  html .charsheet .troika .col-xl-11 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 11;
+  }
+  html .charsheet .troika .col-xl-12 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 12;
+  }
+}
+@media (min-width: 1400px) {
+  html .charsheet .troika .col-xxl-1 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 1;
+  }
+  html .charsheet .troika .col-xxl-2 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 2;
+  }
+  html .charsheet .troika .col-xxl-3 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 3;
+  }
+  html .charsheet .troika .col-xxl-4 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 4;
+  }
+  html .charsheet .troika .col-xxl-5 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 5;
+  }
+  html .charsheet .troika .col-xxl-6 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 6;
+  }
+  html .charsheet .troika .col-xxl-7 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 7;
+  }
+  html .charsheet .troika .col-xxl-8 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 8;
+  }
+  html .charsheet .troika .col-xxl-9 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 9;
+  }
+  html .charsheet .troika .col-xxl-10 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 10;
+  }
+  html .charsheet .troika .col-xxl-11 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 11;
+  }
+  html .charsheet .troika .col-xxl-12 {
+    position: initial;
+    grid-column-start: auto;
+    grid-column-end: span 12;
+  }
+}
+html .charsheet .troika .rowspan-2 {
+  height: 100%;
+  grid-row: span 2;
+}
+html .charsheet .troika .colspan-2 {
+  height: 100%;
+  grid-column: span 2;
+}
+html .charsheet .troika .rowspan-3 {
+  height: 100%;
+  grid-row: span 3;
+}
+html .charsheet .troika .colspan-3 {
+  height: 100%;
+  grid-column: span 3;
+}
+html .charsheet .troika .rowspan-4 {
+  height: 100%;
+  grid-row: span 4;
+}
+html .charsheet .troika .colspan-4 {
+  height: 100%;
+  grid-column: span 4;
+}
+html .charsheet .troika .rowspan-5 {
+  height: 100%;
+  grid-row: span 5;
+}
+html .charsheet .troika .colspan-5 {
+  height: 100%;
+  grid-column: span 5;
+}
+html .charsheet .troika .rowspan-6 {
+  height: 100%;
+  grid-row: span 6;
+}
+html .charsheet .troika .colspan-6 {
+  height: 100%;
+  grid-column: span 6;
+}
+html .charsheet .troika .rowspan-7 {
+  height: 100%;
+  grid-row: span 7;
+}
+html .charsheet .troika .colspan-7 {
+  height: 100%;
+  grid-column: span 7;
+}
+html .charsheet .troika .rowspan-8 {
+  height: 100%;
+  grid-row: span 8;
+}
+html .charsheet .troika .colspan-8 {
+  height: 100%;
+  grid-column: span 8;
+}
+html .charsheet .troika .rowspan-9 {
+  height: 100%;
+  grid-row: span 9;
+}
+html .charsheet .troika .colspan-9 {
+  height: 100%;
+  grid-column: span 9;
+}
+html .charsheet .troika .rowspan-10 {
+  height: 100%;
+  grid-row: span 10;
+}
+html .charsheet .troika .colspan-10 {
+  height: 100%;
+  grid-column: span 10;
+}
+html .charsheet .troika .rowspan-11 {
+  height: 100%;
+  grid-row: span 11;
+}
+html .charsheet .troika .colspan-11 {
+  height: 100%;
+  grid-column: span 11;
+}
+html .charsheet .troika .rowspan-12 {
+  height: 100%;
+  grid-row: span 12;
+}
+html .charsheet .troika .colspan-12 {
+  height: 100%;
+  grid-column: span 12;
+}
+html .charsheet .troika .header {
+  grid-area: header;
+  position: relative;
+  background: rgba(249, 250, 235, 0.8);
+  border-radius: 2rem;
+  overflow: hidden;
+  outline: 1px solid #2d2a27;
+  outline-offset: -1rem;
+}
+html .charsheet .troika .header .editor__controller[value="0"] ~ .header__wrapper::after {
+  background: #cc0000;
+  clip-path: circle(25% at 80% 20%);
+}
+html .charsheet .troika .header .editor__controller[value=on] ~ .header__wrapper::after {
+  background: rgba(54, 118, 171, 0);
+  clip-path: circle(200% at 50% 50%);
+}
+html .charsheet .troika .header__wrapper {
+  position: relative;
+}
+html .charsheet .troika .header__wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease-in-out;
+  z-index: -1;
+}
+html .charsheet .troika .header__view .header__header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+html .charsheet .troika .header__view .header__field--character_avatar img {
+  height: 4rem;
+  border-radius: 0.5rem;
+  outline: 0.2rem solid #2d2a27;
+  outline-offset: -0.2rem;
+}
+html .charsheet .troika .header__view .header__field--character_name {
+  text-align: left;
+  font-size: 2rem;
+  width: 50%;
+}
+html .charsheet .troika .header__view .header__field--pronouns {
+  text-align: center;
+}
+html .charsheet .troika .header__view .header__field--background span {
+  font-size: 1.25rem;
+  font-style: italic;
+}
+html .charsheet .troika .primary-navigation {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: hsla(271deg, 80%, 80%, 0.8);
+  background-color: #fbe706;
+}
+html .charsheet .troika .primary-navigation li {
+  flex: 1;
+}
+html .charsheet .troika .nav {
+  grid-area: nav;
+}
+html .charsheet .troika .nav__button {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 0.5rem;
+}
+html .charsheet .troika .nav__image {
+  width: 1.5rem;
+  aspect-ratio: 1;
+  max-height: 1.5rem;
+}
+html .charsheet .troika .nav__button:hover {
+  background-color: rgba(45, 42, 39, 0.2);
+  color: #fff;
+  border-radius: 2rem;
+}
+html .charsheet .troika input[name=attr_nav][value=all] ~ * .nav__button--all, html .charsheet .troika input[name=attr_nav][value=miscellaneous] ~ * .nav__button--miscellaneous, html .charsheet .troika input[name=attr_nav][value=inventory] ~ * .nav__button--inventory, html .charsheet .troika input[name=attr_nav][value=attacks] ~ * .nav__button--attacks, html .charsheet .troika input[name=attr_nav][value=skillsspells] ~ * .nav__button--skillsspells {
+  background-color: rgba(45, 42, 39, 0.2);
+  background-color: #3676ab;
+  color: #fff;
+  border-radius: 2rem;
+}
+html .charsheet .troika .page--skillsspells {
+  display: none;
+}
+html .charsheet .troika input[name=attr_nav][value=all] ~ .page--skillsspells {
+  display: block;
+}
+html .charsheet .troika input[name=attr_nav][value=skillsspells] ~ .page--skillsspells {
+  display: block;
+  background-color: hsla(283deg, 80%, 80%, 0.8);
+}
+html .charsheet .troika .page--attacks {
+  display: none;
+}
+html .charsheet .troika input[name=attr_nav][value=all] ~ .page--attacks {
+  display: block;
+}
+html .charsheet .troika input[name=attr_nav][value=attacks] ~ .page--attacks {
+  display: block;
+  background-color: hsla(303deg, 80%, 80%, 0.8);
+}
+html .charsheet .troika .page--inventory {
+  display: none;
+}
+html .charsheet .troika input[name=attr_nav][value=all] ~ .page--inventory {
+  display: block;
+}
+html .charsheet .troika input[name=attr_nav][value=inventory] ~ .page--inventory {
+  display: block;
+  background-color: hsla(260deg, 80%, 80%, 0.8);
+}
+html .charsheet .troika .page--miscellaneous {
+  display: none;
+}
+html .charsheet .troika input[name=attr_nav][value=all] ~ .page--miscellaneous {
+  display: block;
+}
+html .charsheet .troika input[name=attr_nav][value=miscellaneous] ~ .page--miscellaneous {
+  display: block;
+  background-color: hsla(100deg, 80%, 80%, 0.8);
+}
+html .charsheet .troika input[name=attr_nav][value=all] ~ .page--all {
+  display: block;
+  background-color: hsla(66deg, 80%, 80%, 0.8);
+}
+html .charsheet .troika .footer {
+  grid-area: footer;
+  float: right;
+  padding: 0.5rem;
+  background-color: hsla(257deg, 80%, 80%, 0.8);
+}
+html .charsheet .troika .footer > span {
+  opacity: 0.5;
+}
+html .charsheet .troika .footer > span::before {
+  content: "v";
+}
+html .charsheet .troika__wrapper {
+  grid-area: wrapper;
+}

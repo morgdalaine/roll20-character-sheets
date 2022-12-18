@@ -1,0 +1,30 @@
+.panel {
+  $this: '.panel';
+  position: relative;
+  padding: $p-xl;
+
+  &__header {
+    // position: absolute;
+    // display: flex;
+    // justify-content: space-between;
+    // width: 100%;
+    // z-index: 100;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: $gutter-gap;
+
+    &--text {
+      padding: 0.5rem 2rem;
+      background: $beige;
+      border-bottom-right-radius: 2rem;
+    }
+    &--toggle {
+      padding: 0.5rem 2rem;
+      background: $beige;
+      border-bottom-left-radius: 2rem;
+    }
+  }
+  &__wrapper {
+    height: 100%;
+  }
+}

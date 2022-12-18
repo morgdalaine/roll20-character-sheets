@@ -1,0 +1,471 @@
+
+<input name="attr_version" value="1.02" type="hidden"/>
+<div class="troika">
+  <header class="panel header">
+    <div class="panel__wrapper">
+      <div class="panel__header">
+        <input class="editor__controller" name="attr_header_editor" type="hidden" value="0"/>
+        <div class="editor__wrapper">
+          <div class="editor__edit header__edit">
+            <div class="row">
+              <div class="header__field col-sm-1 header__field--character_avatar"><img class="header__avatar" name="attr_character_avatar"/></div>
+              <div class="header__field header__field--character_name col-sm-9">
+                <label data-i18n="character_name">Character Name</label>
+                <div class="el-input">
+                  <div class="el-input__wrapper">
+                    <input class="el-input__inner" name="attr_character_name" type="text" value="" data-i18n-placeholder="placeholder_character_name" placeholder="Character Name"/>
+                  </div>
+                </div>
+              </div>
+              <div class="header__field header__field--pronouns col-sm-2">
+                <label data-i18n="pronouns">Pronouns</label>
+                <div class="el-input">
+                  <div class="el-input__wrapper">
+                    <input class="el-input__inner" name="attr_pronouns" type="text" value="" data-i18n-placeholder="placeholder_pronouns" placeholder="they/them"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="editor__view header__view">
+            <div class="header__header">
+              <div class="header__field header__field--character_avatar"><img class="header__avatar" name="attr_character_avatar"/></div>
+              <div class="header__field header__field--character_name"><span name="attr_character_name"></span>
+              </div>
+              <div class="header__field header__field--pronouns">
+                <label data-i18n="pronouns">Pronouns</label><span name="attr_pronouns"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="edit-toggle" name="act_header-editor" type="action">
+          <input class="edit-toggle__controller" name="attr_header_editor" type="hidden" value="0"/>
+          <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos">*</span></div>
+          <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos">y</span></div>
+        </button>
+      </div>
+      <div class="panel__content">
+        <div class="editor">
+          <input class="editor__controller" name="attr_header_editor" type="hidden" value="0"/>
+          <div class="editor__edit header__edit">
+            <div class="row">
+              <div class="header__field header__field--background col">
+                <label data-i18n="background">Background</label>
+                <div class="el-input">
+                  <div class="el-input__wrapper">
+                    <input class="el-input__inner" name="attr_background" type="text" value="" data-i18n-placeholder="placeholder_background" placeholder="Background"/>
+                  </div>
+                </div>
+              </div>
+              <div class="header__field header__field--special col">
+                <label data-i18n="special">Special</label>
+                <div class="el-textarea">
+                  <textarea class="el-textarea__inner" name="attr_special" value="" data-i18n-placeholder="placeholder_special" placeholder="Special"></textarea>
+                </div>
+              </div>
+              <div class="header__field header__field--description col">
+                <label data-i18n="description">Description</label>
+                <div class="el-select">
+                  <div class="el-input">
+                    <div class="el-input__wrapper">
+                      <select class="el-input__inner" name="attr_description">
+                        <option data-i18n="opt_option_one" value="1" selected="selected">One</option>
+                        <option data-i18n="opt_option_two" value="2">Two</option>
+                        <option data-i18n="opt_option_three" value="3" hidden="hidden">Three</option>
+                        <option data-i18n="opt_option_four" value="option_four">Four</option>
+                        <option data-i18n="opt_option_five" value="5">Five</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="editor__view header__view">
+            <div class="header__field header__field--background"><span name="attr_background"></span>
+            </div>
+            <div class="header__field header__field--special"><span name="attr_special"></span>
+            </div>
+            <div class="header__field header__field--description"><span name="attr_description"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <aside class="panel stats">
+    <div class="panel__wrapper">
+      <div class="panel__header">
+        <button class="edit-toggle" name="act_stats-editor" type="action">
+          <input class="edit-toggle__controller" name="attr_stats_editor" type="hidden" value="0"/>
+          <div class="edit-toggle__edit"><span class="visually-hidden" data-i18n="edit">Edit</span><span class="pictos">*</span></div>
+          <div class="edit-toggle__view"><span class="visually-hidden" data-i18n="view">View</span><span class="pictos">y</span></div>
+        </button>
+      </div>
+      <div class="panel__content">
+        <div class="editor">
+          <input class="editor__controller" name="attr_stats_editor" type="hidden" value="0"/>
+          <div class="editor__edit stats__edit">
+            <div class="stats__wrapper">
+              <div class="header__field header__field--skill">
+                <div class="stat stat__skill">
+                  <label data-i18n="skill">Skill</label>
+                  <div class="el-input-number el-input-number--large">
+                    <button class="el-input-number__decrease" name="act_skill-down" type="action"><span class="visually-hidden" data-i18n="step_down">Step Down</span><span class="pictos">_</span></button>
+                    <button class="el-input-number__increase" name="act_skill-up" type="action"><span class="visually-hidden" data-i18n="step_up">Step Up</span><span class="pictos">&</span></button>
+                    <div class="el-input el-input--large">
+                      <div class="el-input__wrapper">
+                        <input class="el-input__inner" name="attr_skill" type="number" placeholder="0" min="0"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="header__field header__field--stamina">
+                <div class="stat stat__stamina">
+                  <label data-i18n="stamina">Stamina</label>
+                  <div class="el-input-number">
+                    <button class="el-input-number__decrease" name="act_stamina-down" type="action"><span class="visually-hidden" data-i18n="step_down">Step Down</span><span class="pictos">_</span></button>
+                    <button class="el-input-number__increase" name="act_stamina-up" type="action"><span class="visually-hidden" data-i18n="step_up">Step Up</span><span class="pictos">&</span></button>
+                    <div class="el-input">
+                      <div class="el-input__wrapper">
+                        <input class="el-input__inner" name="attr_stamina" type="number" placeholder="0" min="0"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="stat stat__stamina_max">
+                  <label data-i18n="stamina_max">Max</label>
+                  <div class="el-input-number el-input-number--simple">
+                    <div class="el-input el-input--simple">
+                      <div class="el-input__wrapper">
+                        <input class="el-input__inner" name="attr_stamina_max" type="number" placeholder="0" min="0"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="header__field header__field--luck">
+                <div class="stat stat__luck">
+                  <label data-i18n="luck">Luck</label>
+                  <div class="el-input-number">
+                    <button class="el-input-number__decrease" name="act_luck-down" type="action"><span class="visually-hidden" data-i18n="step_down">Step Down</span><span class="pictos">_</span></button>
+                    <button class="el-input-number__increase" name="act_luck-up" type="action"><span class="visually-hidden" data-i18n="step_up">Step Up</span><span class="pictos">&</span></button>
+                    <div class="el-input">
+                      <div class="el-input__wrapper">
+                        <input class="el-input__inner" name="attr_luck" type="number" placeholder="0" min="0"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="stat stat__luck_max">
+                  <label data-i18n="luck_max">Max</label>
+                  <div class="el-input-number el-input-number--simple">
+                    <div class="el-input el-input--simple">
+                      <div class="el-input__wrapper">
+                        <input class="el-input__inner" name="attr_luck_max" type="number" placeholder="0" min="0"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="editor__view stats__view">
+            <div class="stats__field stats__field--skill"><span name="attr_skill"></span>
+            </div>
+            <div class="stats__field stats__field--stamina"><span name="attr_stamina"></span>
+            </div>
+            <div class="stats__field stats__field--luck"><span name="attr_luck"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="panel header">
+    <div class="panel__wrapper">
+      <div class="panel__header"></div>
+      <div class="panel__content">
+        <div class="editor">
+          <input class="editor__controller" name="attr_header_editor" value="0" type="hidden"/>
+          <div class="editor__wrapper header__wrapper">
+            <div class="editor__content">
+              <div class="editor__view header__view">
+                <div class="header__name">
+                  <button class="editor__toggle" name="act_header-editor" type="action"><span name="attr_character_name"></span><span class="editor__icon pictos" aria-excluded="true">y</span>
+                  </button>
+                </div>
+                <div class="header__background"><span name="attr_background"></span>
+                </div>
+                <div class="header__special"><span name="attr_special"></span>
+                </div>
+              </div>
+              <div class="editor__edit header__edit">
+                <div class="header__field header__field--character_name">
+                  <label data-i18n="character_name">Character Name</label>
+                  <div class="el-input">
+                    <div class="el-input__wrapper">
+                      <input class="el-input__inner" name="attr_character_name" type="text" value="" data-i18n-placeholder="placeholder_character_name" placeholder="Character Name"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="header__field header__field--pronouns">
+                  <label data-i18n="pronouns">Pronouns</label>
+                  <div class="el-input">
+                    <div class="el-input__wrapper">
+                      <input class="el-input__inner" name="attr_pronouns" type="text" value="" data-i18n-placeholder="placeholder_pronouns" placeholder="they/them"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="header__field header__field--background">
+                  <label data-i18n="background">Background</label>
+                  <div class="el-input">
+                    <div class="el-input__wrapper">
+                      <input class="el-input__inner" name="attr_background" type="text" value="" data-i18n-placeholder="placeholder_background" placeholder="Background"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="header__field header__field--special">
+                  <label data-i18n="special">Special</label>
+                  <div class="el-textarea">
+                    <textarea class="el-textarea__inner" name="attr_special" value="" data-i18n-placeholder="placeholder_special" placeholder="Special"></textarea>
+                  </div>
+                </div>
+                <div class="header__field header__field--description">
+                  <label data-i18n="description">Description</label>
+                  <div class="el-select">
+                    <div class="el-input">
+                      <div class="el-input__wrapper">
+                        <select class="el-input__inner" name="attr_description">
+                          <option data-i18n="opt_option_one" value="1" selected="selected">One</option>
+                          <option data-i18n="opt_option_two" value="2">Two</option>
+                          <option data-i18n="opt_option_three" value="3" hidden="hidden">Three</option>
+                          <option data-i18n="opt_option_four" value="option_four">Four</option>
+                          <option data-i18n="opt_option_five" value="5">Five</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="editor__close" name="act_header-editor" type="action"><span class="visually-hidden" data-i18n="close">Close</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="nav">
+    <input name="attr_nav" value="skillsspells" type="hidden"/>
+    <ul class="primary-navigation nav" id="primary-navigation">
+      <li>
+        <button class="button--alt-text" name="act_nav_skillsspells" type="action"><span data-i18n="skillsspells">Skills/Spells</span><span data-i18n="skillsspells">Skills/Spells</span></button>
+      </li>
+      <li>
+        <button class="button--alt-text" name="act_nav_attacks" type="action"><span data-i18n="attacks">Attacks</span><span data-i18n="attacks">Attacks</span></button>
+      </li>
+      <li>
+        <button class="button--alt-text" name="act_nav_inventory" type="action"><span data-i18n="inventory">Inventory</span><span data-i18n="inventory">Inventory</span></button>
+      </li>
+      <li>
+        <button class="button--alt-text" name="act_nav_miscellaneous" type="action"><span data-i18n="miscellaneous">Miscellaneous</span><span data-i18n="miscellaneous">Miscellaneous</span></button>
+      </li>
+      <li>
+        <button class="button--alt-text" name="act_nav_all" type="action"><span data-i18n="all">All</span><span data-i18n="all">All</span></button>
+      </li>
+    </ul>
+  </nav>
+  <main class="troika__wrapper">
+    <input name="attr_nav" value="skillsspells" type="hidden"/>
+    <div class="page--skillsspells advanced-skills">
+      <h2 class="advanced-skills__title" data-i18n="advanced_skills_spells">Advanced Skills & Spells</h2>
+    </div>
+    <div class="page--attacks attacks">
+      <h2 class="attacks__title" data-i18n="attacks">Attacks</h2>
+    </div>
+    <div class="page--inventory inventory">
+      <h2 class="inventory__title" data-i18n="inventory">Inventory</h2>
+    </div>
+    <div class="page--miscellaneous miscellaneous">
+      <h2 class="miscellaneous__title" data-i18n="miscellaneous">Miscellaneous</h2>
+    </div>
+  </main>
+  <footer class="footer"><span class="visually-hidden" data-i18n="version">Version</span><span name="attr_version"></span></footer>
+</div>
+<rolltemplate class="sheet-rolltemplate-troika">
+  <div class="sheet-template-container">{{#luckRoll}}
+    <!-- Header - Luck-->
+    <div class="sheet-template-header sheet-template-header--luck">
+      <div class="sheet-title">{{title}}</div>
+      <div class="sheet-subtitle">{{subTitle}}</div>
+    </div>{{/luckRoll}}
+    {{#damageRoll}}
+    <!-- Header - Damage-->
+    <div class="sheet-template-header sheet-template-header--damage">
+      <div class="sheet-title">{{title}}</div>
+      <div class="sheet-subtitle">{{subTitle}}</div>
+    </div>{{/damageRoll}}
+    {{#rollSkill}}
+    <!-- Header - Skill-->
+    <div class="sheet-template-header sheet-template-header--skill">
+      <div class="sheet-title">{{title}}</div>
+      <div class="sheet-subtitle">{{subTitle}}</div>
+    </div>{{/rollSkill}}
+    {{#rollModifier}}
+    <div class="sheet-title">Roll Modifier: {{rollModifier}}</div>{{/rollModifier}}
+    {{#rollInventory}}
+    <!-- Header - Inventory-->
+    <div class="sheet-template-header sheet-template-header--inventory">
+      <div class="sheet-title">{{title}}</div>
+      <div class="sheet-subtitle">{{subTitle}}</div>
+    </div>{{/rollInventory}}
+    <!-- Row (Body)-->
+    <div class="sheet-template-row">
+      <!-- Dice-->
+      <div class="sheet-template-dice">
+{{#rollTotal() r1 1}}a{{/rollTotal() r1 1}}
+{{#rollTotal() r1 2}}b{{/rollTotal() r1 2}}
+{{#rollTotal() r1 3}}c{{/rollTotal() r1 3}}
+{{#rollTotal() r1 4}}d{{/rollTotal() r1 4}}
+{{#rollTotal() r1 5}}e{{/rollTotal() r1 5}}
+{{#rollTotal() r1 6}}f{{/rollTotal() r1 6}}
+{{#rollTotal() r2 1}}a{{/rollTotal() r2 1}}
+{{#rollTotal() r2 2}}b{{/rollTotal() r2 2}}
+{{#rollTotal() r2 3}}c{{/rollTotal() r2 3}}
+{{#rollTotal() r2 4}}d{{/rollTotal() r2 4}}
+{{#rollTotal() r2 5}}e{{/rollTotal() r2 5}}
+{{#rollTotal() r2 6}}f{{/rollTotal() r2 6}}{{#luckRoll}}<span class="sheet-template-dice-total"> = {{luckRoll}}</span>{{/luckRoll}}
+        {{#rollSkillUnder}}<span class="sheet-template-dice-total"> = {{rollSkill}}</span>{{/rollSkillUnder}}
+        {{#rollInventory}}<span class="sheet-template-dice-total"> = {{rollInventory}}</span>{{/rollInventory}}
+      </div>
+    </div>{{#damageRoll}}
+    <!-- Footer Damage-->
+    <div class="sheet-template-footer sheet-template-footer--fail">
+      <div class="sheet-template-total">{{#rollLess() damageRoll 1}}Roll: 1 Damage: {{wD1}}{{/rollLess() damageRoll 1}}
+{{#rollTotal() damageRoll 1}}Roll: 1 Damage: {{wD1}}{{/rollTotal() damageRoll 1}}
+{{#rollTotal() damageRoll 2}}Roll: 2 Damage: {{wD2}}{{/rollTotal() damageRoll 2}}
+{{#rollTotal() damageRoll 3}}Roll: 3 Damage: {{wD3}}{{/rollTotal() damageRoll 3}}
+{{#rollTotal() damageRoll 4}}Roll: 4 Damage: {{wD4}}{{/rollTotal() damageRoll 4}}
+{{#rollTotal() damageRoll 5}}Roll: 5 Damage: {{wD5}}{{/rollTotal() damageRoll 5}}
+{{#rollTotal() damageRoll 6}}Roll: 6 Damage: {{wD6}}{{/rollTotal() damageRoll 6}}
+{{#rollGreater() damageRoll 6}}Roll: 7+ Damage: {{wD7}}{{/rollGreater() damageRoll 6}}
+
+      </div>
+    </div>{{/damageRoll}}
+    {{#luckRoll}}
+    <!-- Footer Luck-->{{#^rollGreater() luckRoll attribute}}
+    <div class="sheet-template-footer sheet-template-footer--success">
+      <div class="sheet-template-total">Success</div>
+    </div>{{/^rollGreater() luckRoll attribute}}
+    {{#rollGreater() luckRoll attribute}}
+    <div class="sheet-template-footer sheet-template-footer--fail">
+      <div class="sheet-template-total">Fail</div>
+    </div>{{/rollGreater() luckRoll attribute}}
+    <!-- Note-->
+    <div class="sheet-template-note">
+      <div class="sheet-title">Nt: Reduce Luck by 1</div>
+    </div>{{/luckRoll}}
+    {{#rollSkillUnder}}
+    <!-- Footer Skill Under-->{{#^rollGreater() rollSkill attribute}}
+    <div class="sheet-template-footer sheet-template-footer--success">
+      <div class="sheet-template-total">Success</div>
+    </div>{{/^rollGreater() rollSkill attribute}}
+    {{#rollGreater() rollSkill attribute}}
+    <div class="sheet-template-footer sheet-template-footer--fail">
+      <div class="sheet-template-total">Fail</div>
+    </div>{{/rollGreater() rollSkill attribute}}
+    {{/rollSkillUnder}}
+    {{#rollSkillVersus}}
+    <div class="sheet-template-footer sheet-template-footer--success">
+      <div class="sheet-template-row-head">Total
+        <div class="sheet-template-total"></div>
+      </div>
+      <div class="sheet-template-total">{{rollSkill}}</div>
+      <!-- Skill Vs: Fumble-->{{#rollTotal() r1 1}}{{#rollTotal() r2 1}}
+      <div class="sheet-template-row-head">Fumble!</div>{{/rollTotal() r2 1}}{{/rollTotal() r1 1}}
+      <!-- Skill Vs: Mighty blow-->{{#rollTotal() r1 6}}{{#rollTotal() r2 6}}
+      <div class="sheet-template-row-head">Mighty Blow!</div>{{/rollTotal() r2 6}}{{/rollTotal() r1 6}}
+    </div>{{/rollSkillVersus}}
+    {{#rollInventory}}
+    <!-- Footer - Inventory (Fumble on 2 otherwise roll higher or equal than inv slot)-->{{#rollTotal() rollInventory 2}}
+    <div class="sheet-template-footer sheet-template-footer--fail">
+      <div class="sheet-template-total">Oops: Critical Fumble</div>
+    </div>{{/rollTotal() rollInventory 2}}
+    {{#rollGreater() rollInventory 2}}
+    {{#^rollLess() rollInventory inventoryIndex}}
+    <div class="sheet-template-footer sheet-template-footer--success">
+      <div class="sheet-template-total">Grabbed</div>
+    </div>{{/^rollLess() rollInventory inventoryIndex}}
+    {{#rollLess() rollInventory inventoryIndex}}
+    <div class="sheet-template-footer sheet-template-footer--fail">
+      <div class="sheet-template-total">Fumble</div>
+    </div>{{/rollLess() rollInventory inventoryIndex}}
+    {{/rollGreater() rollInventory 2}}
+    {{/rollInventory}}
+  </div>
+</rolltemplate>
+<!-- === WORKERS ===-->
+<script type="text/worker">
+  const G_NAVIGATION = {
+  nav: ['skillsspells', 'attacks', 'inventory', 'miscellaneous', 'all'],
+};
+
+const G_EDITORS = ['header', 'stats'];
+
+const G_NUMCONTROL = ['skill', 'stamina', 'stamina_max', 'luck', 'luck_max'];
+const G_NUMCONTROL_OPTIONS = {
+  default: { step: 1 },
+  skill: { step: 1, min: 0 },
+  stamina: { step: 1, min: 0, max: 'stamina_max' },
+  stamina_max: { step: 1, min: 0 },
+  luck: { step: 1, min: 0, max: 'luck_max' },
+  luck_max: { step: 1, min: 0 },
+};
+  Object.keys(G_NAVIGATION).forEach((navbar) => {
+  G_NAVIGATION[navbar].forEach((btn) => {
+    on(`clicked:${navbar}_${btn}`, (eventInfo) => {
+      setAttrs({ [navbar]: btn });
+    });
+  });
+});
+
+G_EDITORS.forEach((toggle) => {
+  on(`clicked:${toggle}-editor`, (eventInfo) => {
+    console.log(eventInfo);
+    getAttrs([`${toggle}_editor`], (values) => {
+      const value = values[`${toggle}_editor`] === '0' ? 'on' : '0';
+      setAttrs({ [`${toggle}_editor`]: value });
+    });
+  });
+});
+
+G_NUMCONTROL.forEach((numcontrol) => {
+  on(`clicked:${numcontrol}-up clicked:${numcontrol}-down`, (eventInfo) => {
+    const stepDirection = eventInfo.triggerName.includes('up') ? 1 : -1;
+    let { step, min, max } = G_NUMCONTROL_OPTIONS.hasOwnProperty(numcontrol)
+      ? G_NUMCONTROL_OPTIONS[numcontrol]
+      : G_NUMCONTROL_OPTIONS.default;
+
+    doNumcontrol(numcontrol, step * stepDirection, min, max);
+  });
+});
+  const doNumcontrol = (numcontrol, step, min = null, max = null) => {
+  getAttrs([numcontrol, numcontrol + '_max'], (values) => {
+    let value = +values[numcontrol] || 0;
+    value += step;
+
+    if (min !== null) value = Math.max(value, min);
+
+    if (max !== null) {
+      if (isNaN(max)) {
+        let value_max = +values[max];
+        value = Math.min(value, value_max);
+      } else value = Math.min(value, max);
+    }
+
+    setAttrs({ [numcontrol]: value });
+  });
+};
+
+</script>

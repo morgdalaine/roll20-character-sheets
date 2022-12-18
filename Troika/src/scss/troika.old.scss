@@ -1,180 +1,90 @@
+$sheet-width: 680px;
+$gray-lightest: #f5f5f5;
+$gray-light: #f0f0f0;
+$gray-medium: #aaa;
+$gray-dark: #999;
+$black: #000;
+$white: #fff;
+$border-colour: $gray-medium;
+$background-colour: #fdfbf7;
+$font-tiny: 10px;
+$font-small: 14px;
+$font-medium: 18px;
+$font-large: 22px;
+$font-xlarge: 34px;
+$colour-text: #333;
+$colour-luck: gold;
+$colour-success: lightgreen;
+$colour-success-dark: darkolivegreen;
+$colour-fail: lightpink;
+$colour-fail-dark: indianred;
+$sheet-font: 'Averia Libre', serif;
+$icon-font: 'Pictos', serif;
+$icon-stat-size: 24px;
+$sheets: name, background, special, stats, skills, weapons, inventory, wearing, monies, provisions,
+  footer;
+$sheets-skill: skill, stamina, luck;
+$grid-row: 6px;
+$grid-column: 12px;
+
 /*! ----------------- TROIKA CSS v1.01 ------------------ */
-@import url("https://fonts.googleapis.com/css?family=Averia+Libre&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Averia+Libre&display=swap');
+
 /* ------------- Colours ------------- */
-.sheet-u-bg-black {
-  background-color: #000;
-}
+$colours: (
+  'black' $black,
+  'gray-lightest' $gray-lightest,
+  'gray-light' $gray-light,
+  'gray-medium' $gray-medium,
+  'gray-dark' $gray-dark,
+  'text' $colour-text,
+  'white' $white,
+  'luck' $colour-luck,
+  'sheet' $background-colour,
+  'success' $colour-success,
+  'success-dark' $colour-success-dark,
+  'fail' $colour-fail,
+  'fail-dark' $colour-fail-dark
+);
 
-.sheet-u-black {
-  color: #000;
-}
-
-.sheet-u-bd-black {
-  border-color: #000;
-}
-
-.sheet-u-bg-gray-lightest {
-  background-color: #f5f5f5;
-}
-
-.sheet-u-gray-lightest {
-  color: #f5f5f5;
-}
-
-.sheet-u-bd-gray-lightest {
-  border-color: #f5f5f5;
-}
-
-.sheet-u-bg-gray-light {
-  background-color: #f0f0f0;
-}
-
-.sheet-u-gray-light {
-  color: #f0f0f0;
-}
-
-.sheet-u-bd-gray-light {
-  border-color: #f0f0f0;
-}
-
-.sheet-u-bg-gray-medium {
-  background-color: #aaa;
-}
-
-.sheet-u-gray-medium {
-  color: #aaa;
-}
-
-.sheet-u-bd-gray-medium {
-  border-color: #aaa;
-}
-
-.sheet-u-bg-gray-dark {
-  background-color: #999;
-}
-
-.sheet-u-gray-dark {
-  color: #999;
-}
-
-.sheet-u-bd-gray-dark {
-  border-color: #999;
-}
-
-.sheet-u-bg-text {
-  background-color: #333;
-}
-
-.sheet-u-text {
-  color: #333;
-}
-
-.sheet-u-bd-text {
-  border-color: #333;
-}
-
-.sheet-u-bg-white {
-  background-color: #fff;
-}
-
-.sheet-u-white {
-  color: #fff;
-}
-
-.sheet-u-bd-white {
-  border-color: #fff;
-}
-
-.sheet-u-bg-luck {
-  background-color: gold;
-}
-
-.sheet-u-luck {
-  color: gold;
-}
-
-.sheet-u-bd-luck {
-  border-color: gold;
-}
-
-.sheet-u-bg-sheet {
-  background-color: #fdfbf7;
-}
-
-.sheet-u-sheet {
-  color: #fdfbf7;
-}
-
-.sheet-u-bd-sheet {
-  border-color: #fdfbf7;
-}
-
-.sheet-u-bg-success {
-  background-color: lightgreen;
-}
-
-.sheet-u-success {
-  color: lightgreen;
-}
-
-.sheet-u-bd-success {
-  border-color: lightgreen;
-}
-
-.sheet-u-bg-success-dark {
-  background-color: darkolivegreen;
-}
-
-.sheet-u-success-dark {
-  color: darkolivegreen;
-}
-
-.sheet-u-bd-success-dark {
-  border-color: darkolivegreen;
-}
-
-.sheet-u-bg-fail {
-  background-color: lightpink;
-}
-
-.sheet-u-fail {
-  color: lightpink;
-}
-
-.sheet-u-bd-fail {
-  border-color: lightpink;
-}
-
-.sheet-u-bg-fail-dark {
-  background-color: indianred;
-}
-
-.sheet-u-fail-dark {
-  color: indianred;
-}
-
-.sheet-u-bd-fail-dark {
-  border-color: indianred;
+@each $name, $colour in $colours {
+  .sheet-u-bg-#{$name} {
+    background-color: $colour;
+  }
+  .sheet-u-#{$name} {
+    color: $colour;
+  }
+  .sheet-u-bd-#{$name} {
+    border-color: $colour;
+  }
 }
 
 /* ------------- Grids ------------- */
 .sheet-grid-main {
   display: grid;
-  grid-gap: 6px 12px;
-  grid-template-areas: "name name stats" "background background stats" "special special stats" "skills skills skills" "weapons weapons weapons" "inventory inventory inventory" "wearing monies provisions" ". . footer";
+  grid-gap: $grid-row $grid-column;
+  grid-template-areas:
+    'name name stats'
+    'background background stats'
+    'special special stats'
+    'skills skills skills'
+    'weapons weapons weapons'
+    'inventory inventory inventory'
+    'wearing monies provisions'
+    '. . footer';
   grid-template-columns: 50% auto 25%;
   grid-template-rows: auto;
   width: 100%;
-  min-width: 680px;
-  max-width: 680px;
+  min-width: $sheet-width;
+  max-width: $sheet-width;
   height: auto;
-  color: #333;
+  color: $colour-text;
 }
 
 .sheet-grid-stats {
   display: grid;
   grid-gap: 6px 0;
-  grid-template-areas: "skill" "stamina" "luck";
+  grid-template-areas: 'skill' 'stamina' 'luck';
   grid-template-columns: 100%;
   grid-template-rows: auto;
   width: 100%;
@@ -185,7 +95,7 @@
   display: grid;
   grid-gap: 6px 0;
   grid-template-columns: 20% 80%;
-  grid-template-rows: 22px auto auto;
+  grid-template-rows: $font-large auto auto;
   width: 100%;
   height: auto;
 }
@@ -230,7 +140,7 @@
   grid-column-start: 1;
   grid-row-end: 1;
   grid-row-start: 1;
-  font-size: 24px;
+  font-size: $icon-stat-size;
   line-height: 1;
 }
 
@@ -249,82 +159,41 @@
 }
 
 /* ------------- Section-specific CSS ------------- */
-.sheet-name {
-  grid-area: name;
+@each $sheet in $sheets {
+  .sheet-#{$sheet} {
+    grid-area: $sheet;
+  }
 }
 
-.sheet-background {
-  grid-area: background;
-}
-
-.sheet-special {
-  grid-area: special;
-}
-
-.sheet-stats {
-  grid-area: stats;
-}
-
-.sheet-skills {
-  grid-area: skills;
-}
-
-.sheet-weapons {
-  grid-area: weapons;
-}
-
-.sheet-inventory {
-  grid-area: inventory;
-}
-
-.sheet-wearing {
-  grid-area: wearing;
-}
-
-.sheet-monies {
-  grid-area: monies;
-}
-
-.sheet-provisions {
-  grid-area: provisions;
-}
-
-.sheet-footer {
-  grid-area: footer;
-}
-
-.sheet-skill {
-  grid-area: skill;
-}
-
-.sheet-stamina {
-  grid-area: stamina;
-}
-
-.sheet-luck {
-  grid-area: luck;
+@each $sheet in $sheets-skill {
+  .sheet-#{$sheet} {
+    grid-area: $sheet;
+  }
 }
 
 .sheet-layout--stat {
-  padding: 12px;
-  border: 2px solid #f0f0f0;
+  padding: $grid-row * 2;
+  border: 2px solid $gray-light;
   border-radius: 8px 0 8px 0;
-  background-color: #fdfbf7;
-}
-.sheet-layout--stat.sheet-skill {
-  border-color: lightgreen;
-}
-.sheet-layout--stat.sheet-stamina {
-  border-color: lightpink;
-}
-.sheet-layout--stat.sheet-luck {
-  border-color: gold;
+  background-color: $background-colour;
+
+  &.sheet-skill {
+    border-color: $colour-success;
+  }
+
+  &.sheet-stamina {
+    border-color: $colour-fail;
+  }
+
+  &.sheet-luck {
+    border-color: $colour-luck;
+  }
 }
 
 .sheet-layout-heading {
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid $gray-medium;
 }
 
 /* ----------------- OBJECTS ------------------ */
@@ -332,51 +201,52 @@
 .sheet-o-input-line,
 .sheet-o-input-textarea,
 .sheet-o-input-text {
-  width: calc(100% - 16px);
+  width: calc(100% - #{$grid-column + 4});
   height: auto;
-  margin-top: 6px;
-  padding: 6px;
-  border: 2px solid #aaa;
-  font-family: "Averia Libre", serif;
-  font-size: 18px;
+  margin-top: $grid-row;
+  padding: $grid-row;
+  border: 2px solid $border-colour;
+  font-family: $sheet-font;
+  font-size: $font-medium;
 }
 
 .sheet-o-input-checkbox,
 .sheet-o-input-number {
-  width: 40px !important;
-  padding: 6px 0;
+  width: 40px !important; // override UI width
+  padding: $grid-row 0;
   text-align: center;
-}
-.sheet-o-input-checkbox[readonly],
-.sheet-o-input-number[readonly] {
-  background-color: #f0f0f0;
+
+  &[readonly] {
+    background-color: $gray-light;
+  }
 }
 
 .sheet-o-input-number--large {
-  width: 50px !important;
-  padding: 6px 0;
-  font-size: 34px;
+  width: 50px !important; // override UI width
+  padding: $grid-row 0;
+  font-size: $font-xlarge;
 }
 
 .sheet-o-input-line {
   width: 100%;
   height: auto;
-  padding: 6px 0;
+  padding: $grid-row 0;
   border-top: 2px solid transparent;
   border-right: 2px solid transparent;
-  border-bottom: 2px solid #aaa;
+  border-bottom: 2px solid $border-colour;
   border-left: 2px solid transparent;
 }
 
 .sheet-o-input-modifier {
-  width: 30px !important;
-  border: 2px solid #aaa;
-  font-family: "Averia Libre", serif;
-  font-size: 18px;
+  width: 30px !important; // override UI width
+  border: 2px solid $border-colour;
+  font-family: $sheet-font;
+  font-size: $font-medium;
   text-align: center;
 }
 
 /* ----------------- UTILITIES ------------------ */
+
 .sheet-u-w100 {
   width: 100%;
 }
@@ -398,35 +268,35 @@
 }
 
 .sheet-u-mr-small {
-  margin-right: 6px;
+  margin-right: calc(#{$grid-column} / 2);
 }
 
 .sheet-u-font-heading {
-  font-family: "Averia Libre", serif;
+  font-family: $sheet-font;
 }
 
 .sheet-u-font-icon {
-  font-family: "Pictos", serif;
+  font-family: $icon-font;
 }
 
 .sheet-u-font-tiny {
-  font-size: 10px;
+  font-size: $font-tiny;
 }
 
 .sheet-u-font-small {
-  font-size: 14px;
+  font-size: $font-small;
 }
 
 .sheet-u-font-medium {
-  font-size: 18px;
+  font-size: $font-medium;
 }
 
 .sheet-u-font-large {
-  font-size: 22px;
+  font-size: $font-large;
 }
 
 .sheet-u-font-xlarge {
-  font-size: 34px;
+  font-size: $font-xlarge;
 }
 
 .sheet-u-ucase {
@@ -512,18 +382,18 @@
 }
 
 .sheet-button-title {
-  font-family: "Averia Libre", serif;
-  font-size: 14px;
+  font-family: $sheet-font;
+  font-size: $font-small;
   text-transform: uppercase;
 }
 
 .sheet-button--roll {
-  border: 2px solid #aaa;
-  background-color: #aaa;
+  border: 2px solid $border-colour;
+  background-color: $gray-medium;
 }
 
 .sheet-button--roll-small {
-  padding: 0 8px !important;
+  padding: 0 8px !important; // override UI padding
   transform: translateY(-2px);
 }
 
@@ -532,20 +402,20 @@
   height: 17px;
   margin-left: -2px;
   padding: 4px 0.5em;
-  border: 2px solid #aaa;
-  background-color: #f0f0f0;
-  font-family: "Averia Libre", serif;
-  font-size: 18px;
+  border: 2px solid $gray-medium;
+  background-color: $gray-light;
+  font-family: $sheet-font;
+  font-size: $font-medium;
 }
 
 .sheet-button--grid-mod {
   width: 28px;
   height: 29px;
   padding: 0;
-  border: 2px solid #aaa;
-  background-color: #f0f0f0;
-  font-family: "Averia Libre", serif;
-  font-size: 18px;
+  border: 2px solid $gray-medium;
+  background-color: $gray-light;
+  font-family: $sheet-font;
+  font-size: $font-medium;
 }
 
 .sheet-button:focus {
@@ -554,7 +424,7 @@
 
 .sheet-button--roll:hover,
 .sheet-button--mod:hover {
-  background-color: #fff;
+  background-color: $white;
 }
 
 .sheet-button--mod-sub {
@@ -564,43 +434,43 @@
 }
 
 .sheet-button--mod-add {
-  border-bottom: 2px solid #999;
+  border-bottom: 2px solid $gray-dark;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
 .sheet-button--mod-sub:hover {
-  border-color: indianred;
-  background-color: lightpink;
+  border-color: $colour-fail-dark;
+  background-color: $colour-fail;
 }
 
 .sheet-button--mod-add:hover {
-  border-color: darkolivegreen;
-  background-color: lightgreen;
+  border-color: $colour-success-dark;
+  background-color: $colour-success;
 }
 
 .sheet-button--inv {
   height: 24px;
-  padding: 2px !important;
-  border: 2px solid #aaa;
-  background-color: #aaa;
-  color: #333;
-  font-size: 14px;
+  padding: 2px !important; // override .btn
+  border: 2px solid $gray-medium;
+  background-color: $gray-medium;
+  color: $colour-text;
+  font-size: $font-small;
 }
 
 .sheet-button--inv:hover {
-  background-color: #fff;
+  background-color: $white;
 }
 
 .sheet-button--inv-move {
   display: block;
   min-width: 18px;
-  background-color: #f0f0f0;
-  color: #aaa;
+  background-color: $gray-light;
+  color: $gray-medium;
 }
 
 .sheet-button--inv-move:hover {
-  color: #333;
+  color: $colour-text;
 }
 
 /* ------------- Overrides ------------- */
@@ -610,23 +480,23 @@
   transition-property: background-color, border;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
-  border: 2px solid #aaa;
+  border: 2px solid $border-colour;
   border-radius: 3px;
   background-image: none;
   box-shadow: none;
-  color: #333;
-  font-family: "Averia Libre", serif;
+  color: $colour-text;
+  font-family: $sheet-font;
   text-shadow: none;
   text-transform: uppercase;
-}
-.charsheet .repcontrol_add:hover,
-.charsheet .repcontrol_edit:hover {
-  border-color: darkolivegreen;
-  background-color: lightgreen;
-}
-.charsheet .repcontrol_add:focus,
-.charsheet .repcontrol_edit:focus {
-  outline: none;
+
+  &:hover {
+    border-color: $colour-success-dark;
+    background-color: $colour-success;
+  }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .charsheet .repcontrol {
@@ -638,31 +508,33 @@
   padding-top: 0.7rem;
 }
 
-.charsheet input[type=number]::-webkit-inner-spin-button,
-.charsheet input[type=number]::-webkit-outer-spin-button {
+// Hide the up down arrows on the number inputs
+.charsheet input[type='number']::-webkit-inner-spin-button,
+.charsheet input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
 /* ----------------- Inventory ------------- */
 .sheet-inventory-index {
-  width: 12px;
-  height: 12px;
+  width: $grid-column;
+  height: $grid-column;
   padding-right: 0.5em;
   padding-left: 0.5em;
-  font-family: "Averia Libre", serif;
+  font-family: $sheet-font;
   text-align: right;
 }
 
 /* ------------ Provisions (Checkbox) --------- */
+
 .sheet-provision {
   width: 100%;
   height: 100%;
   padding: 0;
-  border: solid 2px #aaa;
-  background-color: #f0f0f0;
-  color: #999;
-  font-size: 24px;
+  border: solid 2px $gray-medium;
+  background-color: $gray-light;
+  color: $gray-dark;
+  font-size: $icon-stat-size;
   cursor: pointer;
 }
 
@@ -684,68 +556,72 @@ input.sheet-provision-input:checked + span.sheet-checked {
 /* ------------- Roll Templates ------------- */
 .sheet-rolltemplate-troika {
   padding-top: 0.5rem;
-  font-family: "Averia Libre", serif;
+  font-family: $sheet-font;
 }
 
 .sheet-rolltemplate-troika .sheet-template-container {
-  border: 2px solid #aaa;
-  background-color: #f5f5f5;
-  box-shadow: 2px 2px 12px 0 #999;
+  border: 2px solid $gray-medium;
+  background-color: $gray-lightest;
+  box-shadow: 2px 2px 12px 0 $gray-dark;
   line-height: 1.2;
   text-align: center;
-}
-.sheet-rolltemplate-troika .sheet-template-container > div {
-  padding: 0.5rem;
+
+  > div {
+    padding: 0.5rem;
+  }
 }
 
 .sheet-rolltemplate-troika .sheet-template-header {
-  background-color: #aaa;
+  background-color: $gray-medium;
 }
 
 .sheet-rolltemplate-troika .sheet-template-header--luck {
-  background-color: gold;
+  background-color: $colour-luck;
 }
 
 .sheet-rolltemplate-troika .sheet-subtitle {
-  font-size: 22px;
+  font-size: $font-large;
 }
 
 .sheet-rolltemplate-troika .sheet-modifier {
-  font-size: 22px;
+  font-size: $font-large;
 }
 
 .sheet-rolltemplate-troika .sheet-template-dice {
-  font-family: "dicefontd6", sans-serif;
-  font-size: 34px;
+  font-family: 'dicefontd6', sans-serif;
+  font-size: $font-xlarge;
 }
 
 .sheet-rolltemplate-troika .sheet-template-total {
   padding: 0.5rem;
-  font-size: 22px;
+  font-size: $font-large;
 }
 
 .sheet-rolltemplate-troika .sheet-template-dice-total {
   display: inline-block;
   transform: translateY(-5px);
-  font-family: "Averia Libre", serif;
-  font-size: 22px;
-}
-.sheet-rolltemplate-troika .sheet-template-dice-total > span {
-  background-color: transparent;
+  font-family: $sheet-font;
+  font-size: $font-large;
+
+  & > span {
+    background-color: transparent;
+  }
 }
 
 .sheet-rolltemplate-troika .sheet-template-footer--fail {
-  background-color: lightpink;
-}
-.sheet-rolltemplate-troika .sheet-template-footer--fail .sheet-template-total > span {
-  border-color: indianred;
+  background-color: $colour-fail;
+
+  .sheet-template-total > span {
+    border-color: $colour-fail-dark;
+  }
 }
 
 .sheet-rolltemplate-troika .sheet-template-footer--success {
-  background-color: lightgreen;
-}
-.sheet-rolltemplate-troika .sheet-template-footer--success .sheet-template-total > span {
-  border-color: darkolivegreen;
+  background-color: $colour-success;
+
+  .sheet-template-total > span {
+    border-color: $colour-success-dark;
+  }
 }
 
 .sheet-rolltemplate-troika .sheet-template-row-head {
@@ -755,9 +631,9 @@ input.sheet-provision-input:checked + span.sheet-checked {
 .sheet-rolltemplate-troika .sheet-template-equal {
   display: block;
   padding-top: 0.5em;
-  font-size: 14px;
+  font-size: $font-small;
 }
 
 .sheet-rolltemplate-troika .sheet-template-note {
-  background-color: #f0f0f0;
+  background-color: $gray-light;
 }

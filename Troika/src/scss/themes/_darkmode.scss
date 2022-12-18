@@ -1,0 +1,101 @@
+.sheet-darkmode *,
+.sheet-rolltemplate-troika.sheet-rolltemplate-darkmode {
+  $blue: #006387;
+  $blue-darkest: darken($blue, 20%);
+  $blue-lightest: lighten($blue, 20%);
+
+  $accent-blue: #14b9e3;
+  $accent-blue-darkest: darken($accent-blue, 20%);
+  $accent-blue-lightest: lighten($accent-blue, 20%);
+
+  $accent-red: #f30;
+  $accent-red-darkest: darken($accent-red, 20%);
+  $accent-red-lightest: lighten($accent-red, 20%);
+
+  $white: #fff;
+
+  --foreground: #{$white};
+
+  --button-background-color: #{$black};
+  --button-color: #{$white};
+  --button-active-background-color: #{$gold};
+  --button-active-color: #{$accent-red};
+  --button-hover-border-color: #{$accent-red};
+  --button-hover-background: linear-gradient(
+    0deg,
+    #{$accent-red-darkest} 0%,
+    #{$accent-red} 30%,
+    #{$accent-red-darkest} 100%
+  );
+  --button-active-filter: drop-shadow(0px 0px 2px #{$accent-red-darkest})
+    drop-shadow(0px 0px 4px #{$accent-red-darkest});
+  --button-active-text-shadow-color: #{$accent-red};
+  --button-active-text-stroke: #{rgba($white, 0.35)};
+  --button-border-image-src: url('');
+  --button-active-border-image-src: url('');
+
+  --label-color: #{$fadedgold};
+
+  --toggle-inactive-color: #{$light-grey};
+  --toggle-active-color: #{$accent-blue};
+
+  --input-background: #{$black};
+  --input-color: #{$accent-blue};
+  --input-border-color: #{$accent-blue};
+  --input-active-background-color: #{$blue-darkest};
+  --input-active-color: #{$accent-blue-lightest};
+  --input-active-border-color: #{$accent-blue-lightest};
+  --input-disabled-background-color: #{rgba($white, 0.2)};
+  --input-disabled-color: #{rgba($white, 0.8)};
+  --input-disabled-border-color: #{rgba($white, 0.3)};
+
+  --panel-color: #{$black};
+  --panel-title-background-color: #{$black};
+  --panel-title-color: #{$white};
+
+  --repeating-empty-border-color: #{rgba($accent-blue, 0.3)};
+  --repeating-empty-color: #{$lightest-grey};
+  --repeating-empty-background-color: #{rgba($accent-blue, 0.1)};
+
+  --repeating-item-border-color: #{rgba($accent-blue, 0.3)};
+  --repeating-item-background-color: #{rgba($accent-blue, 0.1)};
+
+  --group-headless-background-color: #ffffff1a;
+
+  --magic-hilite-background: linear-gradient(0deg, rgba($accent-blue, 0.1), rgba($accent-blue, 0.1)),
+    rgba(black, 0.1);
+  --magic-hilite-border-image: linear-gradient(
+    180deg,
+    $accent-blue-darkest 0%,
+    $accent-blue 25%,
+    $accent-blue-lightest 50%,
+    $accent-blue 75%,
+    $accent-blue-darkest 100%
+  );
+  --magic-text-shadow-color: #{$accent-blue-darkest};
+  --magic-text-color: #{$accent-blue};
+  --magic-label-color: #{$accent-blue};
+
+  --label-color: #{$accent-blue-lightest};
+
+  --divider-color: #{$accent-red};
+
+  --theme-gradient: linear-gradient(
+    180deg,
+    #{$accent-red-darkest} 0%,
+    #{$accent-red} 15%,
+    #{$accent-red-lightest} 50%,
+    #{$accent-red} 85%,
+    #{$accent-red-darkest} 100%
+  );
+
+  --magic-icon: url('');
+
+  --slider-background: #{$accent-red-darkest};
+  --slider-handle: url('');
+
+  --modal-background-color: #{$blue-darkest};
+  --modal-shadow-color: #{$black};
+  --modal-scroll-color: #{$blue-lightest};
+  --modal-shroud-color: #{rgba($black, 0.5)};
+}

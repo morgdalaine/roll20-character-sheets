@@ -1,0 +1,19 @@
+//- panels have editor toggles
+mixin panel(panel)
+  - const semantic = panel.semantic || 'div';
+  #{semantic}.panel(class=panel.name)
+    .panel__wrapper
+      block
+      .panel__header
+        +block("header", true)
+          if (panel.title)
+            h2(data-i18n=panel.name)= panel.title
+        +edittoggle(panel.name)
+      .panel__content
+        +block("content", true)
+
+mixin blob(blob)
+  .blob(class=blob.name)
+    .blob__wrapper
+      .blob__header
+      .blob__content

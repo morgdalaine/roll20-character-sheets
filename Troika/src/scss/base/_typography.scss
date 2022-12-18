@@ -1,0 +1,15 @@
+/**
+ * Basic typography style for copy text
+ */
+
+label {
+  display: block;
+  color: $label-color;
+  font-family: $font-label;
+  font-variant: small-caps;
+  font-weight: 700;
+}
+
+.pictos {
+  font-family: Pictos;
+}

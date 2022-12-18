@@ -1,0 +1,83 @@
+// -----------------------------------------------------------------------------
+// When having several themes, this file contains everything related to the
+// default one.
+// -----------------------------------------------------------------------------
+
+* {
+  --foreground: #{rgba($white, 0.8)};
+
+  --button-background-color: #{rgb($black, 0.1)};
+  --button-color: #{$black};
+
+  --button-hover-color: #{$red-dark};
+  --button-hover-background: #{rgb($red, 0.2)};
+  --button-hover-border-color: #{$yellow};
+
+  --button-active-color: #{$blue-dark};
+  --button-active-background-color: #{rgb($blue-dark, 0.5)};
+
+  --button-active-filter: drop-shadow(0px 0px 2px rgba(240, 75, 0, 0.4))
+    drop-shadow(0px 0px 4px rgb(240, 75, 0, 1));
+  --button-active-text-shadow-color: #{$yellow};
+  --button-active-text-stroke: #{rgba($white, 0.35)};
+
+  --toggle-inactive-color: #{$light-grey};
+  --toggle-active-color: #{$gold};
+
+  --label-color: #{$black};
+
+  --input-background: #{$white};
+  --input-color: #{$black};
+  --input-border-color: #{$red-dark};
+
+  --input-active-background-color: #{rgb($darker-grey, 0.1)};
+  --input-active-color: #{$blue};
+  --input-active-border-color: #{$blue-dark};
+
+  --input-disabled-background-color: #{linear-gradient(0deg, rgba($white, 0.2), rgba($white, 0.2))};
+  --input-disabled-color: #{rgba($white, 0.5)};
+  --input-disabled-border-color: #{rgba($white, 0.3)};
+
+  --panel-color: #{$black};
+  --panel-title-background-color: #{$black};
+  --panel-title-color: #{$tan-light};
+
+  --repeating-empty-border-color: #{rgba($fadedgold-light, 0.3)};
+  --repeating-empty-color: #{$lightest-grey};
+  --repeating-empty-background-color: #{rgba($black, 0.1)};
+
+  --repeating-item-border-color: #{rgba($fadedgold-light, 0.3)};
+  --repeating-item-background-color: #{rgba($black, 0.3)};
+
+  --group-headless-background-color: #ffffff1a;
+
+  --magic-hilite-background: linear-gradient(0deg, rgba(#f04b00, 0.1), rgba(#f04b00, 0.1)),
+    rgba(black, 0.1);
+  --magic-hilite-border-image: linear-gradient(
+    180deg,
+    #6d2525 0%,
+    #f04b00 25%,
+    #f28702 50%,
+    #f04b00 75%,
+    #6d2525 100%
+  );
+
+  --divider-color: #{$orange};
+
+  --theme-gradient: linear-gradient(
+    180deg,
+    #{$orange-dark} 0%,
+    #{$orange} 15%,
+    #{$orange-light} 50%,
+    #{$orange} 85%,
+    #{$orange-dark} 100%
+  );
+
+  --slider-background: $orange-dark;
+  --slider-handle: url('');
+
+  --modal-background-color: #403b33;
+  --modal-shadow-color: #{$black};
+  --modal-scroll-color: #4f483c;
+  --modal-shroud-color: #{rgba($black, 0.5)};
+}

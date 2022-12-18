@@ -1,0 +1,39 @@
+.stats {
+  $this: '.stats';
+
+  position: sticky;
+  top: 0;
+  z-index: 900;
+
+  &__edit {
+    #{$this}__wrapper {
+      display: flex;
+      justify-content: space-between;
+      gap: $gutter-gap;
+    }
+  }
+
+  // &__wrapper {
+  //   display: flex;
+  //   flex-direction: column;
+  //   gap: $gutter-gap;
+  //   justify-content: space-between;
+  // }
+
+  // &__stat {
+  //   flex: 1;
+  //   background-color: rgb($beige, 0.8);
+  //   border-radius: 2rem;
+  //   padding: $p-lg;
+  // }
+}
+
+.stat {
+  $this: '.stat';
+
+  // &__input[type='number'] {
+  //   font-size: $font-xl;
+  //   width: 5rem;
+  //   aspect-ratio: 1;
+  // }
+}
