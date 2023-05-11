@@ -1,0 +1,13 @@
+{
+  "bracketSpacing": true,
+  "printWidth": 9999,
+  "proseWrap": "never",
+  "pugAttributeSeparator": "always",
+  "pugSortAttributes": "asc",
+  "pugWrapAttributesThreshold": -1,
+  "quoteProps": "consistent",
+  "semi": true,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "es5"
+}
