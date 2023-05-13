@@ -28,6 +28,11 @@ on("sheet:opened change:acc_diff change:frame_save_target change:frame_class cha
 				frame_heat = 5;
 				frame_repairs = 5;
 				break;
+			case "KIDD":
+				frame_hp = 6;
+				frame_heat = 4;
+				frame_repairs = 5;
+				break;
 			case "LANCASTER":
 				frame_hp = 6;
 				frame_heat = 6;
@@ -932,7 +937,9 @@ on("sheet:opened change:acc_diff change:frame_save_target change:frame_class cha
 								</optgroup>
 								<optgroup label="IPS-NORTHSTAR">
 									<option value="BLACKBEARD">BLACKBEARD</option>
+									<option value="CALIBAN">CALIBAN</option>
 									<option value="DRAKE">DRAKE</option>
+									<option value="KIDD">KIDD</option>
 									<option value="LANCASTER">LANCASTER</option>
 									<option value="NELSON">NELSON</option>
 									<option value="RALEIGH">RALEIGH</option>
