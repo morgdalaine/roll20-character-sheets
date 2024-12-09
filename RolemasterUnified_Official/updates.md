@@ -1,3 +1,17 @@
+# 2024-12-3
+
+- Initiative modified by maneuver penalty
+- Update rolltemplate for initiative to show penalty if present.
+- Add tests and validations for creatures.
+- All creature weapons now have a size (usually 0)
+- Display a message when an injury takes a character to negative hits.
+
+# 2024-11-26
+
+- Handle the knockback results when they have a ' in them.
+- Handle short swords and a few other weapons for creatures.
+
+
 # 2024-11-19
 
 - Stats are now right aligned.
